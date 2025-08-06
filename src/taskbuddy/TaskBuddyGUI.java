@@ -121,12 +121,21 @@ public class TaskBuddyGUI extends javax.swing.JFrame {
         statusComboBox = new javax.swing.JComboBox<>();
         categoryField = new javax.swing.JLabel();
         categoryComboBox = new javax.swing.JComboBox<>();
+        jPanel3 = new javax.swing.JPanel();
         jScrollPane2 = new javax.swing.JScrollPane();
         taskTable = new javax.swing.JTable();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("WELCOME TO TASKBUDDY");
+        setBackground(new java.awt.Color(215, 197, 155));
+
+        jPanel2.setBackground(new java.awt.Color(224, 198, 149));
 
         AddButton.setText("AddTask");
+        AddButton.setMaximumSize(new java.awt.Dimension(86, 23));
+        AddButton.setMinimumSize(new java.awt.Dimension(86, 23));
+        AddButton.setPreferredSize(new java.awt.Dimension(86, 23));
 
         UpdateButton.setText("UpdateTask");
 
@@ -137,13 +146,13 @@ public class TaskBuddyGUI extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addContainerGap(293, Short.MAX_VALUE)
+                .addContainerGap(15, Short.MAX_VALUE)
                 .addComponent(UpdateButton)
-                .addGap(62, 62, 62)
+                .addGap(145, 145, 145)
                 .addComponent(DeleteButton)
-                .addGap(82, 82, 82)
-                .addComponent(AddButton)
-                .addGap(222, 222, 222))
+                .addGap(197, 197, 197)
+                .addComponent(AddButton, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(24, 24, 24))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -151,57 +160,63 @@ public class TaskBuddyGUI extends javax.swing.JFrame {
                 .addContainerGap()
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(UpdateButton)
-                    .addComponent(DeleteButton))
+                    .addComponent(DeleteButton)
+                    .addComponent(AddButton, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
-                .addGap(0, 0, Short.MAX_VALUE)
-                .addComponent(AddButton, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE))
         );
 
         getContentPane().add(jPanel2, java.awt.BorderLayout.PAGE_END);
 
-        jPanel1.setLayout(new java.awt.GridBagLayout());
+        jPanel1.setBackground(new java.awt.Color(224, 198, 149));
+        jPanel1.setLayout(new javax.swing.BoxLayout(jPanel1, javax.swing.BoxLayout.Y_AXIS));
 
-        titleField.setText("jLabel1");
-        jPanel1.add(titleField, new java.awt.GridBagConstraints());
+        titleField.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        titleField.setText("Title");
+        jPanel1.add(titleField);
 
-        jTextField1.setText("jTextField1");
-        jPanel1.add(jTextField1, new java.awt.GridBagConstraints());
+        jTextField1.setMaximumSize(new java.awt.Dimension(32767, 214));
+        jPanel1.add(jTextField1);
 
-        descriptionArea.setText("jLabel2");
-        jPanel1.add(descriptionArea, new java.awt.GridBagConstraints());
+        descriptionArea.setText("Description");
+        jPanel1.add(descriptionArea);
 
         jTextArea1.setColumns(20);
         jTextArea1.setRows(5);
+        jTextArea1.setMaximumSize(new java.awt.Dimension(214, 214));
+        jTextArea1.setMinimumSize(new java.awt.Dimension(64, 22));
         jScrollPane1.setViewportView(jTextArea1);
 
-        jPanel1.add(jScrollPane1, new java.awt.GridBagConstraints());
+        jPanel1.add(jScrollPane1);
 
-        dueDateField.setText("jLabel3");
-        jPanel1.add(dueDateField, new java.awt.GridBagConstraints());
+        dueDateField.setText("Due Date");
+        jPanel1.add(dueDateField);
 
-        jTextField2.setText("jTextField2");
-        jPanel1.add(jTextField2, new java.awt.GridBagConstraints());
+        jTextField2.setMaximumSize(new java.awt.Dimension(32767, 214));
+        jPanel1.add(jTextField2);
 
-        priorityField.setText("jLabel4");
-        jPanel1.add(priorityField, new java.awt.GridBagConstraints());
+        priorityField.setText("Priority");
+        jPanel1.add(priorityField);
 
         priorityComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel1.add(priorityComboBox, new java.awt.GridBagConstraints());
+        jPanel1.add(priorityComboBox);
 
-        statusField.setText("jLabel5");
-        jPanel1.add(statusField, new java.awt.GridBagConstraints());
+        statusField.setText("Status");
+        jPanel1.add(statusField);
 
         statusComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel1.add(statusComboBox, new java.awt.GridBagConstraints());
+        jPanel1.add(statusComboBox);
 
-        categoryField.setText("jLabel1");
-        jPanel1.add(categoryField, new java.awt.GridBagConstraints());
+        categoryField.setText("Category");
+        jPanel1.add(categoryField);
 
         categoryComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jPanel1.add(categoryComboBox, new java.awt.GridBagConstraints());
+        jPanel1.add(categoryComboBox);
 
         getContentPane().add(jPanel1, java.awt.BorderLayout.CENTER);
+
+        jPanel3.setBackground(new java.awt.Color(224, 198, 149));
+
+        jScrollPane2.setPreferredSize(new java.awt.Dimension(400, 402));
 
         taskTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -214,9 +229,19 @@ public class TaskBuddyGUI extends javax.swing.JFrame {
                 "Title 1", "Title 2", "Title 3", "Title 4"
             }
         ));
+        taskTable.setMinimumSize(new java.awt.Dimension(60, 100));
         jScrollPane2.setViewportView(taskTable);
 
-        getContentPane().add(jScrollPane2, java.awt.BorderLayout.PAGE_START);
+        jPanel3.add(jScrollPane2);
+
+        getContentPane().add(jPanel3, java.awt.BorderLayout.LINE_END);
+
+        jLabel1.setBackground(new java.awt.Color(224, 198, 149));
+        jLabel1.setFont(new java.awt.Font("Algerian", 1, 24)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("WELCOME TO TASKBUDDY");
+        jLabel1.setOpaque(true);
+        getContentPane().add(jLabel1, java.awt.BorderLayout.PAGE_START);
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -413,8 +438,10 @@ public class TaskBuddyGUI extends javax.swing.JFrame {
     private javax.swing.JLabel categoryField;
     private javax.swing.JLabel descriptionArea;
     private javax.swing.JLabel dueDateField;
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JTextArea jTextArea1;
